@@ -5,16 +5,10 @@ import styled from 'styled-components';
 export default function LocationsList() {
     const [ loc, setLoc ] = useState([])
 
-    const LocDiv = styled.div`
-        
-        width: 95%;
-        display: flex;
-        
-        height: 100%;
-
-    `;
+    const LocDiv = styled.div``;
     const InLocDiv = styled.div`
         width: 40%;
+        margin: 4%;
         border: 2px solid black;
 
     `;
@@ -23,7 +17,6 @@ export default function LocationsList() {
         Axios
             .get('https://rickandmortyapi.com/api/location/')
             .then(res => {
-                console.log(res.data.results);
                 setLoc(res.data.results);
 
             })
@@ -33,7 +26,7 @@ export default function LocationsList() {
     }, [])
 
     return(
-        <LocDiv>
+        <LocDiv className='grid-view'>
             ${loc.map(cv => {
                 return(
                     <InLocDiv key={cv.id}>
