@@ -13,6 +13,11 @@ const SearchFormK = ({ errors, touched, values, status }) => {
     }
   }, [status])
 
+  useEffect(() => {
+    Axios
+      .get('https://rickandmortyapi.com/api/character/?name=:id')
+  }, [])
+
   //onSubmit={() => onSearch(name)}
 
   return (
