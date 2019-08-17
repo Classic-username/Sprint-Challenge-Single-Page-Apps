@@ -4,5 +4,10 @@ import { NavLink } from "react-router-dom";
 
 // TODO: Add missing tabs below
 export default function TabNav() {
-
+    return(
+        <NavLink></NavLink>
+        <NavLink></NavLink>
+        <NavLink></NavLink>
+        <NavLink></NavLink>
+    )
 };

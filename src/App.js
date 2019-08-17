@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./components/Header.js";
 import CharacterCard from "./components/CharacterCard.js";
 import EpisodeList from "./components/EpisodeList.js";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import LocationCard from "./components/LocationCard.js";
 // import AppRouter from "./components/AppRouter.js";
 
@@ -17,7 +18,7 @@ export default function App() {
       
       {/* <LocationCard /> */}
 
-      <EpisodeList />
+      {/* <EpisodeList /> */}
 
       {/* <AppRouter /> */}
     </main>
