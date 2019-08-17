@@ -1,26 +1,24 @@
 import React from "react";
-// import TabNav from "./components/TabNav.js";
+import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
-import CharacterCard from "./components/CharacterCard.js";
-import EpisodeList from "./components/EpisodeList.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-// import LocationCard from "./components/LocationCard.js";
-// import AppRouter from "./components/AppRouter.js";
+import { CharacterCard, LocationCard, EpisodeList, WelcomePage } from "./components/AppRouter.js";
 
 export default function App() {
   return (
     <main>
       <Header />
-      {/* <TabNav /> */}
 
-      {/* <CharacterCard/> */}
+      <TabNav />
 
-      
-      {/* <LocationCard /> */}
+      <Route exact path='/' component={WelcomePage}/>
 
-      {/* <EpisodeList /> */}
+      <Route path='/characters' component={CharacterCard} />
 
-      {/* <AppRouter /> */}
+      <Route path='/locations' component={LocationCard} />
+
+      <Route path='/episodes' component={EpisodeList} />
+
     </main>
   );
 }
