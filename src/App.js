@@ -3,6 +3,7 @@ import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { CharacterCard, LocationCard, EpisodeList, WelcomePage } from "./components/AppRouter.js";
+import SearchForm from "./components/SearchForm.js";
 
 export default function App() {
   return (
@@ -10,6 +11,8 @@ export default function App() {
       <Header />
 
       <TabNav />
+
+      <SearchForm />
 
       <Route exact path='/' component={WelcomePage}/>
 
