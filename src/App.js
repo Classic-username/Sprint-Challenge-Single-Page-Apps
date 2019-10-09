@@ -12,7 +12,8 @@ export default function App() {
 
       <TabNav />
 
-      <SearchForm />
+      {/* <SearchForm /> */} 
+      {/* To be added later */}
 
       <Route exact path='/' component={WelcomePage}/>
 
